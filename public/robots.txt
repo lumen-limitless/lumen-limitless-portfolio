@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://zachlippa.dev
+
+# Sitemaps
+Sitemap: https://zachlippa.dev/sitemap.xml
