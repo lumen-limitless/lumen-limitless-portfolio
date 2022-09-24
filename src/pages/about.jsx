@@ -54,16 +54,15 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Zach Lippa. I live in Rochester, New York, where I develop
-              software.
+              I’m Zach Lippa. I live in Rochester, NY. I create software.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                Since I was young, I have always been facinated with technology.
-                At the age of 6 I disassembled our family vacuum cleaner, much
-                to my parents dismay. At age 12 I began writing basic scripts in
-                C++, programming a simple command line executable to do my math
-                homework for me.
+                Since I was young, I have always been fascinated with
+                technology. At the age of 6 I disassembled our family vacuum
+                cleaner, much to my parents&apos; dismay. At age 12 I began
+                writing basic scripts in C++, programming a simple command line
+                executable to do my math homework for me.
               </p>
 
               <p>

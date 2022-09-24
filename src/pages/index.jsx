@@ -2,7 +2,6 @@ import Image from 'next/future/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
@@ -12,29 +11,7 @@ import image3 from '@/images/photos/image-3.webp'
 import image4 from '@/images/photos/image-4.webp'
 import image5 from '@/images/photos/image-5.webp'
 import ascensionLogo from '@/images/logos/ascension.svg'
-
-function MailIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
+import { Contact } from '@/components/Contact'
 
 function BriefcaseIcon(props) {
   return (
@@ -59,18 +36,18 @@ function BriefcaseIcon(props) {
   )
 }
 
-function ArrowDownIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
+// function ArrowDownIcon(props) {
+//   return (
+//     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+//       <path
+//         d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+//         strokeWidth="1.5"
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+//     </svg>
+//   )
+// }
 
 // function Article({ article }) {
 //   return (
@@ -127,39 +104,10 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
-function Contact() {
-  return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Contact Me</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Contact via email for collaboration or correspondence.
-      </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Send
-        </Button>
-      </div>
-    </form>
-  )
-}
-
 function Resume() {
   let resume = [
     {
-      company: 'Ascension Protocol',
+      company: 'Freelancer',
       title: 'Full Stack & Smart Contract Developer',
       logo: ascensionLogo,
       start: '2021',
@@ -230,12 +178,12 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-3 overflow-hidden py-4 sm:gap-6">
+      <div className=" flex justify-center gap-3 overflow-hidden py-4 sm:gap-6">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[1/1] w-32 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-44  sm:rounded-2xl',
+              'relative aspect-[1/1] w-16 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-24 sm:rounded-2xl md:w-32 lg:w-44',
               rotations[imageIndex % rotations.length]
             )}
           >

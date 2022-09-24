@@ -1,20 +1,17 @@
-import Head from 'next/head'
-
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { NextSeo } from 'next-seo'
 
 export default function ThankYou() {
   return (
     <>
-      <Head>
-        <title>You’re subscribed - Spencer Sharp</title>
-        <meta
-          name="description"
-          content="Thanks for subscribing to my newsletter."
-        />
-      </Head>
+      <NextSeo
+        title="Thank You"
+        description="Thank you for contacting me. I will be in touch shortly."
+      />
+
       <SimpleLayout
-        title="Thanks for subscribing."
-        intro="I’ll send you an email any time I publish a new blog post, release a new project, or have anything interesting to share that I think you’d want to hear about. You can unsubscribe at any time, no hard feelings."
+        title="Thanks for your message."
+        intro="I aim to reply to all contacts as soon as possible. Thank you for your interest and looking forward to working with you."
       />
     </>
   )
