@@ -10,7 +10,7 @@ import image2 from '@/images/photos/image-2.png'
 import image3 from '@/images/photos/image-3.webp'
 import image4 from '@/images/photos/image-4.webp'
 import image5 from '@/images/photos/image-5.webp'
-import ascensionLogo from '@/images/logos/ascension.svg'
+import lumenlimitlessLogo from '@/images/logos/lumenlimitless.svg'
 import { Contact } from '@/components/Contact'
 
 function BriefcaseIcon(props) {
@@ -109,7 +109,7 @@ function Resume() {
     {
       company: 'Freelancer',
       title: 'Full Stack & Smart Contract Developer',
-      logo: ascensionLogo,
+      logo: lumenlimitlessLogo,
       start: '2021',
       end: {
         label: 'Present',
