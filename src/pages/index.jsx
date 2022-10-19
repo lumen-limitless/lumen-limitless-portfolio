@@ -67,12 +67,12 @@ function BriefcaseIcon(props) {
 function Examples() {
   let examples = [
     {
-      link: '',
+      link: 'https://staking-example-app.vercel.app/',
       title: 'Staking App',
       description: 'Staking application & smart contracts',
     },
     {
-      link: '',
+      link: 'https://metamodels-interface.vercel.app/',
       title: 'NFT Minting App',
       description: 'NFT ERC-721 minting application & smart contracts',
     },

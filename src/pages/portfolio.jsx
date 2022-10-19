@@ -2,6 +2,8 @@ import Image from 'next/future/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import ascensionLogo from '@/images/logos/ascension.svg'
+import metamodelsLogo from '@/images/logos/metamodels.svg'
+import pawsitiveLogo from '@/images/logos/pawsitive.png'
 import { NextSeo } from 'next-seo'
 
 const projects = [
@@ -14,6 +16,25 @@ const projects = [
       label: 'ascensionprotocol.io',
     },
     logo: ascensionLogo,
+  },
+  {
+    name: 'MetaModels NFT',
+    description:
+      'NFT that promotes women inclusivity in the Web3 and Blockchain industry.',
+    link: {
+      href: 'https://metamodels-interface.vercel.app/',
+      label: 'metamodelsnft.io',
+    },
+    logo: metamodelsLogo,
+  },
+  {
+    name: 'Pawsitive Pet Care',
+    description: '',
+    link: {
+      href: 'https://pawsitivepet.care/',
+      label: 'pawsitivepet.care',
+    },
+    logo: pawsitiveLogo,
   },
 ]
 
@@ -31,10 +52,13 @@ function LinkIcon(props) {
 export default function Projects() {
   return (
     <>
-      <NextSeo title="Projects" description="Things I’ve made" />
+      <NextSeo
+        title="Portfolio"
+        description="Projects and organizations that I have contributed to during my full stack & smart contract developer career."
+      />
       <SimpleLayout
-        title="Projects I’ve created and contributed to over the years."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Most of my work is open-source, so feel free to contribute your ideas and suggestions."
+        title="Portfolio"
+        intro="Projects and organizations that I have contributed to during my full stack & smart contract developer career."
       >
         <ul
           role="list"

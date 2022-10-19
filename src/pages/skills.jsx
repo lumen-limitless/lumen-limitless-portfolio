@@ -28,7 +28,7 @@ export default function Uses() {
   return (
     <>
       <NextSeo
-        title="My Stack"
+        title="Skills"
         description="Software, frameworks, and libraries I use to develop my projects."
       />
       <SimpleLayout
@@ -64,7 +64,6 @@ export default function Uses() {
               Highly versatile library for interacting with EVM and web3
               protocols.
             </Tool>
-            <Tool title="Zustand">Web application global state made easy.</Tool>
             <Tool title="ThreeJS">
               Allows easy manipulation of 3D objects & scenes in web
               applications.
