@@ -155,9 +155,7 @@ function NavItem({
         href={href}
         className={clsx(
           'relative flex items-center gap-1 px-3 py-2 transition',
-          isActive
-            ? 'text-tahiti-500 dark:text-tahiti-400'
-            : 'hover:text-tahiti-500 dark:hover:text-tahiti-400'
+          isActive ? '' : ''
         )}
       >
         {children}
