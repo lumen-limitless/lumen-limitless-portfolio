@@ -126,10 +126,11 @@ function MobileNavigation(props: any) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+                <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/about">About</MobileNavItem>
                 {/* <MobileNavItem href="/articles">Articles</MobileNavItem> */}
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/stack">Stack</MobileNavItem>
+                {/* <MobileNavItem href="/projects">Projects</MobileNavItem> */}
+                <MobileNavItem href="/skills">Skills</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -172,6 +173,23 @@ function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+        <NavItem href="/">
+          <svg
+            className="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+          Home
+        </NavItem>
         <NavItem href="/about">
           <svg
             className="h-4 w-4"
