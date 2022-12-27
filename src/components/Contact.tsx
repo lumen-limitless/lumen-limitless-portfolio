@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form'
-import { Button } from '@/components/Button'
+import { Button } from './Button'
 import { useRouter } from 'next/router'
 import emailjs from '@emailjs/browser'
 function MailIcon(props) {
@@ -33,15 +33,15 @@ export function Contact() {
     formState: { errors },
   } = useForm()
   const router = useRouter()
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: any) => {
     console.log(data)
     const { email, name, subject, message } = data
 
     try {
       const templateParams = { email, name, subject, message }
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
         templateParams,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
@@ -61,9 +61,7 @@ export function Contact() {
           <MailIcon className="h-6 w-6 flex-none" />
           <span className="ml-3">Contact Me</span>
         </h2>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Contact via email for collaboration or correspondence.
-        </p>
+
         <div className="mt-6 flex flex-col gap-3">
           <input
             type="email"

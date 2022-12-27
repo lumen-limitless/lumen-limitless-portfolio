@@ -1,9 +1,10 @@
-import { Card } from '@/components/Card'
-import { Section } from '@/components/Section'
-import { SimpleLayout } from '@/components/SimpleLayout'
+import { Card } from '../components/Card'
+import { Section } from '../components/Section'
+import { SimpleLayout } from '../components/SimpleLayout'
 import { NextSeo } from 'next-seo'
+import React from 'react'
 
-function ToolsSection({ children, ...props }) {
+function ToolsSection({ children, ...props }: any) {
   return (
     <Section {...props}>
       <ul role="list" className="space-y-16">
@@ -13,12 +14,10 @@ function ToolsSection({ children, ...props }) {
   )
 }
 
-function Tool({ title, href, children }) {
+function Tool({ title, href, children }: any) {
   return (
-    <Card as="li">
-      <Card.Title as="h3" href={href}>
-        {title}
-      </Card.Title>
+    <Card>
+      <Card.Title href={href}>{title}</Card.Title>
       <Card.Description>{children}</Card.Description>
     </Card>
   )
@@ -29,10 +28,10 @@ export default function Uses() {
     <>
       <NextSeo
         title="Skills"
-        description="Software, frameworks, and libraries I use to develop my projects."
+        description="Tools I use to develop my projects."
       />
       <SimpleLayout
-        title="Software, frameworks, and libraries I use to develop my projects."
+        title="Tools I use to develop my projects."
         intro="Here is a list of all the tools I use to develop and create projects for my clients and myself."
       >
         <div className="space-y-20">
@@ -61,8 +60,7 @@ export default function Uses() {
               Intuitive and production-ready animation library.
             </Tool>
             <Tool title="EthersJS">
-              Highly versatile library for interacting with EVM and web3
-              protocols.
+              Highly versatile library for creating web3 applications.
             </Tool>
             <Tool title="ThreeJS">
               Allows easy manipulation of 3D objects & scenes in web

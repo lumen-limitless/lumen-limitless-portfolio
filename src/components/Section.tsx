@@ -1,6 +1,12 @@
-import { useId } from 'react'
+import React, { useId } from 'react'
 
-export function Section({ title, children }) {
+export function Section({
+  title,
+  children,
+}: {
+  title: string
+  children: React.ReactNode
+}) {
   let id = useId()
 
   return (

@@ -1,9 +1,9 @@
-import Image from 'next/future/image'
-import { Card } from '@/components/Card'
-import { SimpleLayout } from '@/components/SimpleLayout'
-import ascensionLogo from '@/images/logos/ascension.svg'
-import metamodelsLogo from '@/images/logos/metamodels.svg'
-import pawsitiveLogo from '@/images/logos/pawsitive.png'
+import Image from 'next/image'
+import { Card } from '../components/Card'
+import { SimpleLayout } from '../components/SimpleLayout'
+import ascensionLogo from '../images/logos/ascension.svg'
+import metamodelsLogo from '../images/logos/metamodels.svg'
+import pawsitiveLogo from '../images/logos/pawsitive.png'
 import { NextSeo } from 'next-seo'
 
 const projects = [
@@ -65,7 +65,7 @@ export default function Projects() {
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <Card as="li" key={project.name}>
+            <Card key={project.name}>
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}

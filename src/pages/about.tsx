@@ -1,13 +1,16 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
-import { Container } from '@/components/Container'
-import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import Container from '../components/Container'
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from '../components/SocialIcons'
+import portraitImage from '../images/avatar.jpg'
 import { NextSeo } from 'next-seo'
 
-function SocialLink({ className, href, children, icon: Icon }) {
+function SocialLink({ className, href, children, icon: Icon }: any) {
   return (
     <li className={clsx(className, 'flex')}>
       <Link
@@ -21,7 +24,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
   )
 }
 
-function MailIcon(props) {
+function MailIcon(props: any) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -37,11 +40,11 @@ export default function About() {
     <>
       <NextSeo
         title="About"
-        description="Zach Lippa, Full Stack Software Developer, Smart Contract Engineer, and Entrepreneur."
+        description="Zach Lippa, Full Stack Software Developer, Certified Solidity Developer, and Entrepreneur."
       />
 
       <Container className="mt-16 sm:mt-32">
-        <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+        <div className="grid grid-cols-1 gap-y-16 px-3 md:px-6 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 lg:px-9">
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <Image
@@ -54,7 +57,7 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Zach Lippa. I live in Rochester, NY. I create software.
+              Hey, I&apos;m Zach. I&apos;m a Software Developer.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
@@ -74,12 +77,13 @@ export default function About() {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              {/* <SocialLink href="#" icon={TwitterIcon}>
+              <SocialLink
+                href="https://twitter.com/LumenLimitless"
+                icon={TwitterIcon}
+              >
                 Follow on Twitter
-              </SocialLink> */}
-              {/* <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
-              </SocialLink> */}
+              </SocialLink>
+
               <SocialLink
                 href="https://github.com/lumen-limitless"
                 icon={GitHubIcon}

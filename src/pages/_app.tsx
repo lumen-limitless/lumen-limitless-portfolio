@@ -1,14 +1,15 @@
 import { useEffect, useRef } from 'react'
 
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+import { Footer } from '../components/Footer'
+import { Header } from '../components/Header'
 
-import '@/styles/tailwind.css'
+import '../styles/tailwind.css'
 import 'focus-visible'
 import { DefaultSeo } from 'next-seo'
+import { AppProps } from 'next/app'
 
-function usePrevious(value) {
-  let ref = useRef()
+function usePrevious(value: string) {
+  let ref = useRef<string>()
 
   useEffect(() => {
     ref.current = value
@@ -17,7 +18,7 @@ function usePrevious(value) {
   return ref.current
 }
 
-export default function App({ Component, pageProps, router }) {
+export default function App({ Component, pageProps, router }: AppProps) {
   let previousPathname = usePrevious(router.pathname)
 
   return (
