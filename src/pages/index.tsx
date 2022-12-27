@@ -18,7 +18,7 @@ import lumenlimitlessLogo from '../images/logos/lumenlimitless.svg'
 import { Contact } from '../components/Contact'
 import { Button } from '../components/Button'
 
-function BriefcaseIcon(props) {
+function BriefcaseIcon(props: any) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ function BriefcaseIcon(props) {
   )
 }
 
-function ArrowDownIcon(props) {
+function ArrowDownIcon(props: any) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path

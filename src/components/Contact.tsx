@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form'
 import { Button } from './Button'
 import { useRouter } from 'next/router'
 import emailjs from '@emailjs/browser'
-function MailIcon(props) {
+function MailIcon(props: any) {
   return (
     <svg
       viewBox="0 0 24 24"

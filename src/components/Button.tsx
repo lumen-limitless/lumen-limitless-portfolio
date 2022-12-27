@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
-const variantStyles = {
+const variantStyles: { [variant: string]: string } = {
   primary:
     'bg-stratos-400 font-semibold text-zinc-100 hover:bg-stratos-400/80 active:bg-stratos-400/70 active:text-zinc-100/70 dark:bg-stratos-500 dark:hover:bg-stratos-500/50 dark:active:bg-stratos-500/40 dark:active:text-zinc-100/70',
   secondary:

@@ -1,7 +1,7 @@
 import glob from 'fast-glob'
 import * as path from 'path'
 
-async function importArticle(articleFilename) {
+async function importArticle(articleFilename: string) {
   let { meta, default: component } = await import(
     `../pages/articles/${articleFilename}`
   )
