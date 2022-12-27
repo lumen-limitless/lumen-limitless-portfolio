@@ -101,7 +101,7 @@ export default function About() {
               <SocialLink
                 href="mailto:lumenlimitless@gmail.com"
                 icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-stratos-300/60"
+                className="mt-8 border-t border-stratos-300/10 pt-8 dark:border-stratos-300/60"
               >
                 lumenlimitless@gmail.com
               </SocialLink>
