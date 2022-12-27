@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Card } from '../components/Card'
-import { SimpleLayout } from '../components/SimpleLayout'
+import { SimpleLayout } from '../layouts/SimpleLayout'
 import ascensionLogo from '../images/logos/ascension.svg'
 import metamodelsLogo from '../images/logos/metamodels.svg'
 import pawsitiveLogo from '../images/logos/pawsitive.png'
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     name: 'Pawsitive Pet Care',
-    description: '',
+    description: 'Local dog Sitting & training business',
     link: {
       href: 'https://pawsitivepet.care/',
       label: 'pawsitivepet.care',
@@ -53,12 +53,12 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title="Portfolio"
-        description="Projects and organizations that I have contributed to during my full stack & smart contract developer career."
+        title="Projects"
+        description="Projects and organizations that I have contributed to during my career."
       />
       <SimpleLayout
-        title="Portfolio"
-        intro="Projects and organizations that I have contributed to during my full stack & smart contract developer career."
+        title="Projects"
+        intro="Projects and organizations that I have contributed to during my career."
       >
         <ul
           role="list"
