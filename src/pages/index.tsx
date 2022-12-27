@@ -182,13 +182,13 @@ function Photos() {
   ]
 
   return (
-    <div className="mt-16 sm:mt-20">
-      <div className=" flex justify-center gap-3 overflow-hidden py-4 sm:gap-6 lg:gap-9">
+    <Container className="mt-16 sm:mt-20">
+      <div className=" flex justify-evenly  overflow-hidden py-4 sm:gap-1">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[1/1] w-16 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-24 sm:rounded-2xl md:w-32 lg:w-44',
+              'relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
               rotations[imageIndex % rotations.length]
             )}
           >
@@ -201,7 +201,7 @@ function Photos() {
           </div>
         ))}
       </div>
-    </div>
+    </Container>
   )
 }
 
