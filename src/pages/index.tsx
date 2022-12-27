@@ -73,17 +73,17 @@ function Examples() {
   let examples = [
     {
       link: 'https://staking-example-app.vercel.app/',
-      title: 'Staking App',
+      title: 'Staking Demo',
       description: 'Staking application & smart contracts',
     },
     {
       link: 'https://metamodels-interface.vercel.app/',
-      title: 'NFT Minting App',
+      title: 'NFT Minting Demo',
       description: 'NFT ERC-721 minting application & smart contracts',
     },
     {
       link: 'https://commerce-example-8s8d3ic4d-lumenlimitless.vercel.app/',
-      title: 'Ecommerce App',
+      title: 'Ecommerce Demo',
       description: 'Ecommerce application',
     },
   ]
