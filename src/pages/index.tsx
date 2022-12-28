@@ -77,7 +77,7 @@ function Examples() {
       description: 'Staking application & smart contracts',
     },
     {
-      link: 'https://metamodels-interface.vercel.app/',
+      link: 'https://nft-example-app.vercel.app/',
       title: 'NFT Minting Demo',
       description: 'NFT ERC-721 minting application & smart contracts',
     },

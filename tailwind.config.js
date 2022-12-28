@@ -6,7 +6,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        offWhite: '#F9f9f9',
         stratos: {
           DEFAULT: '#00005C',
           50: '#1414FF',
