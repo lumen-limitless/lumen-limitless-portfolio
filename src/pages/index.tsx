@@ -17,6 +17,7 @@ import image5 from '../images/photos/ethers.webp'
 import lumenlimitlessLogo from '../images/logos/lumenlimitless.svg'
 import { Contact } from '../components/Contact'
 import { Button } from '../components/Button'
+import { motion } from 'framer-motion'
 
 function BriefcaseIcon(props: any) {
   return (
@@ -185,10 +186,10 @@ function Photos() {
     <Container className="mt-16 sm:mt-20">
       <div className=" flex justify-evenly  overflow-hidden py-4 sm:gap-1">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
+          <motion.div
             key={image.src}
             className={clsx(
-              'relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
+              ' relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl  shadow-lg   sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
               rotations[imageIndex % rotations.length]
             )}
           >
@@ -198,7 +199,7 @@ function Photos() {
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </Container>

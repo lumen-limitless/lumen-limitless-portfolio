@@ -313,8 +313,8 @@ function Avatar({ large = false, className = '', ...props }) {
 export function Header() {
   let isHomePage = useRouter().pathname === '/'
 
-  let headerRef = useRef<any>(null)
-  let avatarRef = useRef<any>(null)
+  let headerRef = useRef<HTMLDivElement>(null)
+  let avatarRef = useRef<HTMLDivElement>(null)
   let isInitial = useRef(true)
 
   useEffect(() => {
@@ -330,7 +330,9 @@ export function Header() {
     }
 
     function updateHeaderStyles() {
-      let { top, height } = headerRef.current?.getBoundingClientRect()
+      if (!headerRef.current) return
+      const { top, height } = headerRef.current?.getBoundingClientRect()
+
       let scrollY = clamp(
         window.scrollY,
         0,
@@ -432,7 +434,7 @@ export function Header() {
             />
             <Container
               className="top-0 order-last -mb-3 pt-3"
-              style={{ position: 'var(--header-position)' }}
+              // style={{ position: 'var(--header-position)' }}
             >
               <div
                 className="top-[var(--avatar-top,theme(spacing.3))] w-full px-3 md:px-6 lg:px-9"
@@ -448,7 +450,7 @@ export function Header() {
                   />
                   <Avatar
                     large
-                    className="block h-16 w-16 origin-left"
+                    className="z-20 block h-16 w-16 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
                   />
                 </div>
@@ -463,7 +465,7 @@ export function Header() {
         >
           <Container
             className="top-[var(--header-top,theme(spacing.6))] w-full"
-            style={{ position: 'var(--header-inner-position)' }}
+            // style={{ position: 'var(--header-inner-position)' }}
           >
             <div className="relative flex gap-4 px-3 md:px-6 lg:px-9">
               <div className="flex flex-1 ">

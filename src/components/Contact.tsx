@@ -2,6 +2,8 @@ import { useForm } from 'react-hook-form'
 import { Button } from './Button'
 import { useRouter } from 'next/router'
 import emailjs from '@emailjs/browser'
+import { z } from 'zod'
+
 function MailIcon(props: any) {
   return (
     <svg
@@ -25,6 +27,13 @@ function MailIcon(props: any) {
   )
 }
 
+const ContactDataSchema = z.object({
+  email: z.string().email(),
+  name: z.string().min(1),
+  subject: z.string(),
+  message: z.string(),
+})
+
 export function Contact() {
   const {
     register,
@@ -33,11 +42,10 @@ export function Contact() {
     formState: { errors },
   } = useForm()
   const router = useRouter()
-  const onSubmit = async (data: any) => {
-    console.log(data)
-    const { email, name, subject, message } = data
-
+  const onSubmit = async (data: unknown) => {
+    console.debug(data)
     try {
+      const { email, name, subject, message } = ContactDataSchema.parse(data)
       const templateParams = { email, name, subject, message }
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
