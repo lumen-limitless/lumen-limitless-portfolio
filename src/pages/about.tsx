@@ -24,7 +24,7 @@ function SocialLink({ className, href, children, icon: Icon }: any) {
   )
 }
 
-function MailIcon(props: any) {
+function MailIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -40,7 +40,7 @@ export default function About() {
     <>
       <NextSeo
         title="About"
-        description="Zach Lippa, Full Stack Software Developer, Certified Solidity Developer, and Entrepreneur."
+        description="Zach Lippa, Full Stack Developer, Certified Solidity Developer, and Entrepreneur."
       />
 
       <Container className="mt-16 sm:mt-32">
@@ -57,21 +57,22 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Hey, I&apos;m Zach. I&apos;m a Software Developer.
+              Hey, I&apos;m Zach. I&apos;m a Full Stack/Web3 Developer.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 Since I was young, I have always been fascinated with
                 technology. At the age of 6 I disassembled our family vacuum
                 cleaner, much to my parents&apos; dismay. At age 12 I began
-                writing basic scripts in C++, programming a simple command line
-                executable to do my math homework for me.
+                writing basic scripts in C++, programming simple command line
+                games and mouse-jiggling pranks.
               </p>
 
               <p>
-                Today, I am a self-employed web developer and freelancer with
-                experience working on both the frontend and backend of a wide
-                variety of production level projects.
+                Today, I am a Full Stack developer specializing in Web3
+                (Solidity/EVM). I have experience working on the frontend,
+                backend, and smart contracts for a wide variety of projects and
+                organizations.
               </p>
             </div>
           </div>
