@@ -11,7 +11,7 @@ export default function Container({
     <div
       className={[
         className,
-        'container mx-auto px-3 md:px-12 lg:px-24 xl:px-36 2xl:px-48',
+        'container mx-auto px-4 md:px-12 lg:px-36 xl:px-48 2xl:px-56 ',
       ]
         .filter(Boolean)
         .join(' ')}
