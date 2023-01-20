@@ -185,7 +185,7 @@ function Photos() {
           <motion.div
             key={image.src}
             className={clsx(
-              ' relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl  drop-shadow-xl  sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
+              ' relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl  sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
               rotations[imageIndex % rotations.length]
             )}
           >
@@ -215,9 +215,6 @@ export default function Home() {
               3000,
               'Entrepreneur',
               3000,
-              () => {
-                console.debug()
-              },
             ]}
             wrapper="h1"
             className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"

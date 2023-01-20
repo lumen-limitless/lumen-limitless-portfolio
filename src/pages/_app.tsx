@@ -22,13 +22,13 @@ export default function App({ Component, pageProps, router }: AppProps) {
   const previousPathname = usePrevious(router.pathname)
 
   const particlesInit = useCallback(async (engine: any) => {
-    console.log(engine)
+    console.debug(engine)
 
     await loadFull(engine)
   }, [])
 
   const particlesLoaded = useCallback(async (container: any) => {
-    console.log(container)
+    console.debug(container)
   }, [])
   return (
     <>
