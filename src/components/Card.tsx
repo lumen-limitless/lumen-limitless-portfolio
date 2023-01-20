@@ -26,7 +26,7 @@ export function Card({
     <div
       className={clsx(
         className,
-        'group relative flex flex-col items-start  backdrop-blur hover:drop-shadow-sm'
+        'group relative flex flex-col items-start p-3  backdrop-blur hover:drop-shadow-xl'
       )}
     >
       {children}

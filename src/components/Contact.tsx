@@ -63,7 +63,7 @@ export function Contact() {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="rounded-2xl border border-stratos-300/10  p-6 drop-shadow backdrop-blur dark:border-stratos-300/60"
+        className="rounded-2xl border border-zinc-900/10 p-6  drop-shadow backdrop-blur dark:border-zinc-100/10 "
       >
         <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <MailIcon className="h-6 w-6 flex-none" />
@@ -77,7 +77,7 @@ export function Contact() {
             aria-label="Email address"
             required
             {...register('email')}
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-tahiti-500 focus:outline-none focus:ring-4 focus:ring-tahiti-500/10 dark:border-stratos-300/60 dark:bg-black dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-tahiti-400 dark:focus:ring-tahiti-400/10 sm:text-sm"
+            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-tahiti-500 focus:outline-none focus:ring-4 focus:ring-tahiti-500/10 dark:border-zinc-100/10 dark:bg-black dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-tahiti-400 dark:focus:ring-tahiti-400/10 sm:text-sm"
           />
           <input
             type="text"
@@ -85,7 +85,7 @@ export function Contact() {
             aria-label="Name"
             required
             {...register('name')}
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-tahiti-500 focus:outline-none focus:ring-4 focus:ring-tahiti-500/10 dark:border-stratos-300/60 dark:bg-black dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-tahiti-400 dark:focus:ring-tahiti-400/10 sm:text-sm"
+            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-tahiti-500 focus:outline-none focus:ring-4 focus:ring-tahiti-500/10 dark:border-zinc-100/10 dark:bg-black dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-tahiti-400 dark:focus:ring-tahiti-400/10 sm:text-sm"
           />
           <input
             type="text"
@@ -93,12 +93,12 @@ export function Contact() {
             aria-label="Subject"
             required
             {...register('subject')}
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-tahiti-500 focus:outline-none focus:ring-4 focus:ring-tahiti-500/10 dark:border-stratos-300/60 dark:bg-black dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-tahiti-400 dark:focus:ring-tahiti-400/10 sm:text-sm"
+            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-tahiti-500 focus:outline-none focus:ring-4 focus:ring-tahiti-500/10 dark:border-zinc-100/10 dark:bg-black dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-tahiti-400 dark:focus:ring-tahiti-400/10 sm:text-sm"
           />
           <textarea
             placeholder="Message"
             {...register('message')}
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-tahiti-500 focus:outline-none focus:ring-4 focus:ring-tahiti-500/10 dark:border-stratos-300/60 dark:bg-black dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-tahiti-400 dark:focus:ring-tahiti-400/10 sm:text-sm"
+            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-tahiti-500 focus:outline-none focus:ring-4 focus:ring-tahiti-500/10 dark:border-zinc-100/10 dark:bg-black dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-tahiti-400 dark:focus:ring-tahiti-400/10 sm:text-sm"
           ></textarea>
           <Button type="submit" className="flex-none">
             Send

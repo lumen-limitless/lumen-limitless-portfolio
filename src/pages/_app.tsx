@@ -52,28 +52,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
             },
           },
           fpsLimit: 120,
-          interactivity: {
-            events: {
-              onClick: {
-                enable: true,
-                mode: 'push',
-              },
-              onHover: {
-                enable: false,
-                mode: 'repulse',
-              },
-              resize: true,
-            },
-            modes: {
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-            },
-          },
           particles: {
             color: {
               value: '#0000FF',
