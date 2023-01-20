@@ -23,7 +23,7 @@ function Tool({ title, href, children }: any) {
   )
 }
 
-export default function Uses() {
+export default function Skills() {
   return (
     <>
       <NextSeo
@@ -31,10 +31,17 @@ export default function Uses() {
         description="Tools I use to develop my projects."
       />
       <SimpleLayout
-        title="Tools I use to develop my projects."
-        intro="Here is a list of all the tools I use to develop and create projects for my clients and myself."
+        title="My Stack 🚀"
+        intro="Here is a list of all the tools I use to create projects."
       >
         <div className="space-y-20">
+          <ToolsSection title="Programming Languages">
+            <Tool title="Typescript">Typed superset of JavaScript.</Tool>
+            <Tool title="Solidity">
+              Object oriented programming language for implementing smart
+              contracts.
+            </Tool>
+          </ToolsSection>
           <ToolsSection title="Development tools">
             <Tool title="Visual Studio Code">
               The best code editing platform available today.
@@ -68,8 +75,9 @@ export default function Uses() {
             </Tool>
             <Tool title="Hardhat">
               Versatile and highly customizable smart contract development
-              framework
+              framework.
             </Tool>
+            <Tool title="Foundry">Smart contract development toolchain.</Tool>
           </ToolsSection>
         </div>
       </SimpleLayout>

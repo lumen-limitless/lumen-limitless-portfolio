@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import Container from '../components/Container'
-import avatarImage from '../images/avatar.jpg'
+import lumenlimitlessLogo from '../images/lumen.png'
 import React, {
   Fragment,
   ReactElement,
@@ -13,7 +13,7 @@ import React, {
   useRef,
 } from 'react'
 
-function CloseIcon(props: any) {
+function CloseIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -28,7 +28,7 @@ function CloseIcon(props: any) {
   )
 }
 
-function ChevronDownIcon(props: any) {
+function ChevronDownIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
       <path
@@ -42,7 +42,7 @@ function ChevronDownIcon(props: any) {
   )
 }
 
-function SunIcon(props: any) {
+function SunIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ function SunIcon(props: any) {
   )
 }
 
-function MoonIcon(props: any) {
+function MoonIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -297,7 +297,7 @@ function Avatar({ large = false, className = '', ...props }) {
       {...props}
     >
       <Image
-        src={avatarImage}
+        src={lumenlimitlessLogo}
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
@@ -315,7 +315,7 @@ export function Header() {
 
   let headerRef = useRef<HTMLDivElement>(null)
   let avatarRef = useRef<HTMLDivElement>(null)
-  let isInitial = useRef(true)
+  let isInitial = useRef(false)
 
   useEffect(() => {
     let downDelay = avatarRef.current?.offsetTop ?? 0
@@ -434,11 +434,17 @@ export function Header() {
             />
             <Container
               className="top-0 order-last -mb-3 pt-3"
-              // style={{ position: 'var(--header-position)' }}
+              style={{
+                position: 'var(--header-position)' as 'sticky' | 'fixed',
+              }}
             >
               <div
                 className="top-[var(--avatar-top,theme(spacing.3))] w-full px-3 md:px-6 lg:px-9"
-                style={{ position: 'var(--header-inner-position)' as any }}
+                style={{
+                  position: 'var(--header-inner-position)' as
+                    | 'sticky'
+                    | 'fixed',
+                }}
               >
                 <div className="relative">
                   <AvatarContainer
@@ -461,11 +467,13 @@ export function Header() {
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
-          style={{ position: 'var(--header-position)' } as any}
+          style={{ position: 'var(--header-position)' as 'sticky' | 'fixed' }}
         >
           <Container
             className="top-[var(--header-top,theme(spacing.6))] w-full"
-            // style={{ position: 'var(--header-inner-position)' }}
+            style={{
+              position: 'var(--header-inner-position)' as 'sticky' | 'fixed',
+            }}
           >
             <div className="relative flex gap-4 px-3 md:px-6 lg:px-9">
               <div className="flex flex-1 ">

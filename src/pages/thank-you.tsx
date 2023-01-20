@@ -10,7 +10,7 @@ export default function ThankYou() {
       />
 
       <SimpleLayout
-        title="Thanks for your message."
+        title="📨 Thanks for your message."
         intro="I aim to reply to all contacts as soon as possible. Thank you for your interest and looking forward to working with you."
       />
     </>

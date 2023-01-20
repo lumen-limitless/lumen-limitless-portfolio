@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 const variantStyles: { [variant: string]: string } = {
   primary:
-    'bg-stratos-400 font-semibold text-zinc-100 hover:bg-stratos-400/80 active:bg-stratos-400/70 active:text-zinc-100/70 dark:bg-stratos-500 dark:hover:bg-stratos-500/50 dark:active:bg-stratos-500/40 dark:active:text-zinc-100/70',
+    'bg-stratos-200 font-semibold text-zinc-100 hover:bg-opacity-60 active:bg-stratos-400/70 active:text-zinc-100/70   dark:active:bg-stratos-500/40 dark:active:text-zinc-100/70',
   secondary:
     'bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70',
 }

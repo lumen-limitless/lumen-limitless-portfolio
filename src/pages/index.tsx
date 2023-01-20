@@ -1,23 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
 import { Card } from '../components/Card'
 import Container from '../components/Container'
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '../components/SocialIcons'
+import { GitHubIcon, TwitterIcon } from '../components/SocialIcons'
 import image1 from '../images/photos/typescript.webp'
 import image2 from '../images/photos/solidity.webp'
 import image3 from '../images/photos/tailwind.webp'
 import image4 from '../images/photos/next.webp'
 import image5 from '../images/photos/ethers.webp'
-import lumenlimitlessLogo from '../images/logos/lumenlimitless.svg'
+import lumenlimitlessLogo from '../images/lumen.png'
 import { Contact } from '../components/Contact'
 import { Button } from '../components/Button'
 import { motion } from 'framer-motion'
+import { TypeAnimation } from 'react-type-animation'
 
 function BriefcaseIcon(props: any) {
   return (
@@ -110,67 +106,67 @@ function SocialLink({ icon: Icon, ...props }: any) {
   )
 }
 
-// function Resume() {
-//   let resume = [
-//     {
-//       company: 'Lumen Limitless',
-//       title: 'Software Developer',
-//       logo: lumenlimitlessLogo,
-//       start: '2021',
-//       end: {
-//         label: 'Present',
-//         dateTime: new Date().getFullYear(),
-//       },
-//     },
-//   ]
+function Resume() {
+  let resume = [
+    {
+      company: 'Lumen Limitless',
+      title: 'Software Developer',
+      logo: lumenlimitlessLogo,
+      start: '2021',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+  ]
 
-//   return (
-//     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-//         <BriefcaseIcon className="h-6 w-6 flex-none" />
-//         <span className="ml-3">Work</span>
-//       </h2>
-//       <ol className="mt-6 space-y-4">
-//         {resume.map((role: any, roleIndex: any) => (
-//           <li key={roleIndex} className="flex gap-4">
-//             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-//               <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
-//             </div>
-//             <dl className="flex flex-auto flex-wrap gap-x-2">
-//               <dt className="sr-only">Company</dt>
-//               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-//                 {role.company}
-//               </dd>
-//               <dt className="sr-only">Role</dt>
-//               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-//                 {role.title}
-//               </dd>
-//               <dt className="sr-only">Date</dt>
-//               <dd
-//                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-//                 aria-label={`${role.start.label ?? role.start} until ${
-//                   role.end.label ?? role.end
-//                 }`}
-//               >
-//                 <time dateTime={role.start.dateTime ?? role.start}>
-//                   {role.start.label ?? role.start}
-//                 </time>{' '}
-//                 <span aria-hidden="true">—</span>{' '}
-//                 <time dateTime={role.end.dateTime ?? role.end}>
-//                   {role.end.label ?? role.end}
-//                 </time>
-//               </dd>
-//             </dl>
-//           </li>
-//         ))}
-//       </ol>
-//       <Button href="#" variant="secondary" className="group mt-6 w-full">
-//         Download CV
-//         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-//       </Button>
-//     </div>
-//   )
-// }
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Work</span>
+      </h2>
+      <ol className="mt-6 space-y-4">
+        {resume.map((role: any, roleIndex: any) => (
+          <li key={roleIndex} className="flex gap-4">
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+            </div>
+            <dl className="flex flex-auto flex-wrap gap-x-2">
+              <dt className="sr-only">Company</dt>
+              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                {role.company}
+              </dd>
+              <dt className="sr-only">Role</dt>
+              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+                {role.title}
+              </dd>
+              <dt className="sr-only">Date</dt>
+              <dd
+                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+                aria-label={`${role.start.label ?? role.start} until ${
+                  role.end.label ?? role.end
+                }`}
+              >
+                <time dateTime={role.start.dateTime ?? role.start}>
+                  {role.start.label ?? role.start}
+                </time>{' '}
+                <span aria-hidden="true">—</span>{' '}
+                <time dateTime={role.end.dateTime ?? role.end}>
+                  {role.end.label ?? role.end}
+                </time>
+              </dd>
+            </dl>
+          </li>
+        ))}
+      </ol>
+      <Button href="#" variant="secondary" className="group mt-6 w-full">
+        Download CV
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      </Button>
+    </div>
+  )
+}
 
 function Photos() {
   let rotations = [
@@ -189,7 +185,7 @@ function Photos() {
           <motion.div
             key={image.src}
             className={clsx(
-              ' relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl  shadow-lg   sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
+              ' relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl  drop-shadow-xl  sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
               rotations[imageIndex % rotations.length]
             )}
           >
@@ -210,14 +206,25 @@ export default function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="px3 max-w-2xl md:px-6 lg:px-9">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Full Stack/Web3 Developer
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Zach, a Full Stack/Web3 Developer & Entrepreneur based in
-            Rochester, New York.
-          </p>
+        <div className="max-w-3xl px-3 md:px-6 lg:px-9">
+          <TypeAnimation
+            sequence={[
+              'Blockchain Engineer',
+              3000,
+              'Full Stack Developer',
+              3000,
+              'Entrepreneur',
+              3000,
+              () => {
+                console.debug()
+              },
+            ]}
+            wrapper="h1"
+            className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
+            cursor={true}
+            repeat={Infinity}
+          />
+
           <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com/LumenLimitless"
@@ -229,11 +236,6 @@ export default function Home() {
               href="https://github.com/lumen-limitless"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/lumen-limitless-74b383251/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
             />
           </div>
         </div>

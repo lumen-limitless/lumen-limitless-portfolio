@@ -2,15 +2,22 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import Container from '../components/Container'
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '../components/SocialIcons'
+import { GitHubIcon, TwitterIcon } from '../components/SocialIcons'
 import portraitImage from '../images/avatar.jpg'
 import { NextSeo } from 'next-seo'
+import { ReactNode } from 'react'
 
-function SocialLink({ className, href, children, icon: Icon }: any) {
+function SocialLink({
+  className,
+  href,
+  children,
+  icon: Icon,
+}: {
+  className?: string
+  href: string
+  children?: ReactNode
+  icon: any
+}) {
   return (
     <li className={clsx(className, 'flex')}>
       <Link
@@ -40,7 +47,7 @@ export default function About() {
     <>
       <NextSeo
         title="About"
-        description="Zach Lippa, Full Stack Developer, Certified Solidity Developer, and Entrepreneur."
+        description="I'm Zach, a Blockchain Engineer, Full Stack Developer, and Entrepreneur based in Rochester, NY."
       />
 
       <Container className="mt-16 sm:mt-32">
@@ -55,24 +62,27 @@ export default function About() {
               />
             </div>
           </div>
-          <div className="lg:order-first lg:row-span-2">
+          <div className="backdrop-blur lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Hey, I&apos;m Zach. I&apos;m a Full Stack/Web3 Developer.
+              Hey, I&apos;m Zach 👨‍💻
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                Since I was young, I have always been fascinated with
-                technology. At the age of 6 I disassembled our family vacuum
-                cleaner, much to my parents&apos; dismay. At age 12 I began
-                writing basic scripts in C++, programming simple command line
-                games and mouse-jiggling pranks.
+                I&apos;m a Blockchain Engineer and Full Stack Developer based in
+                Rochester, NY. Since I was young, I have always been fascinated
+                with technology. At the age of 6 I disassembled our family
+                vacuum cleaner, much to my parents&apos; dismay. At age 12 I
+                began writing basic scripts in C++, programming simple command
+                line games and mouse-jiggling pranks.
               </p>
 
               <p>
-                Today, I am a Full Stack developer specializing in Web3
-                (Solidity/EVM). I have experience working on the frontend,
-                backend, and smart contracts for a wide variety of projects and
-                organizations.
+                Today, I use my skills in Typescript, Solidity, NextJS,
+                EthersJS, and much more to create exciting new products on the
+                cutting edge of technology. I have experience working on the
+                frontend, backend, and smart contracts for a wide variety of
+                projects and organizations. Want to make your dream project a
+                reality? Contact me today and let&apos;s make it happen!
               </p>
             </div>
           </div>
@@ -92,13 +102,7 @@ export default function About() {
               >
                 Follow on GitHub
               </SocialLink>
-              <SocialLink
-                href="https://www.linkedin.com/in/lumen-limitless-74b383251/"
-                icon={LinkedInIcon}
-                className="mt-4"
-              >
-                Follow on LinkedIn
-              </SocialLink>
+
               <SocialLink
                 href="mailto:lumenlimitless@gmail.com"
                 icon={MailIcon}
