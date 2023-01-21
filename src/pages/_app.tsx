@@ -64,7 +64,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
               width: 1,
             },
             collisions: {
-              enable: true,
+              enable: false,
             },
             move: {
               direction: 'none',
@@ -90,7 +90,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
               type: 'circle',
             },
             size: {
-              value: { min: 1, max: 5 },
+              value: { min: 1, max: 3 },
             },
           },
           detectRetina: true,

@@ -240,7 +240,7 @@ export default function Home() {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 px-3 md:px-6 lg:max-w-none lg:grid-cols-2 lg:px-9">
-          <div className="flex flex-col gap-16 backdrop-blur">
+          <div className="flex flex-col gap-12 rounded-2xl  p-6 backdrop-blur ">
             <Examples />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
