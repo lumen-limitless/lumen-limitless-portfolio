@@ -69,7 +69,7 @@ function ArrowDownIcon(props: any) {
 function Examples() {
   let examples = [
     {
-      link: 'https://staking-example-app.vercel.app/',
+      link: 'https://staking-example-rho.vercel.app/',
       title: 'Staking Demo',
       description: 'Staking application & smart contracts',
     },
