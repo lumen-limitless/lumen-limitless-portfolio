@@ -33,7 +33,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <DefaultSeo
-        titleTemplate="%s - Zach Lippa"
+        titleTemplate="%s - Lumen Limitless"
         defaultTitle="Lumen Limitless"
       />
       <div className="fixed inset-0 flex justify-center sm:px-8">
