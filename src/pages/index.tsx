@@ -3,17 +3,17 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { Card } from '../components/Card'
 import Container from '../components/Container'
-import { GitHubIcon, TwitterIcon } from '../components/SocialIcons'
+import { GitHubIcon, LinkedInIcon, TwitterIcon } from '../components/SocialIcons'
 import image1 from '../images/photos/typescript.webp'
 import image2 from '../images/photos/solidity.webp'
 import image3 from '../images/photos/tailwind.webp'
 import image4 from '../images/photos/next.webp'
-import image5 from '../images/photos/ethers.webp'
-import lumenlimitlessLogo from '../images/lumen.png'
+import image5 from '../images/photos/rust.png'
 import { Contact } from '../components/Contact'
 import { Button } from '../components/Button'
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
+import toonaLogo from '../images/logos/toona.svg'
 
 function BriefcaseIcon(props: any) {
   return (
@@ -79,7 +79,7 @@ function Examples() {
       description: 'NFT ERC-721 minting application & smart contracts',
     },
     {
-      link: 'https://commerce-example-8s8d3ic4d-lumenlimitless.vercel.app/',
+      link: 'https://template-next-ecommerce.vercel.app/',
       title: 'Ecommerce Demo',
       description: 'Ecommerce application',
     },
@@ -108,10 +108,11 @@ function SocialLink({ icon: Icon, ...props }: any) {
 
 function Resume() {
   let resume = [
+
     {
-      company: 'Lumen Limitless',
-      title: 'Software Developer',
-      logo: lumenlimitlessLogo,
+      company: 'Toona Studio',
+      title: 'Lead Developer',
+      logo: toonaLogo,
       start: '2021',
       end: {
         label: 'Present',
@@ -144,9 +145,8 @@ function Resume() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
+                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
+                  }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
@@ -160,10 +160,10 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      </Button> */}
     </div>
   )
 }
@@ -234,6 +234,13 @@ export default function Home() {
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
+
+            <SocialLink
+              href="https://www.linkedin.com/in/zachary-lippa-2b04a6285/"
+              aria-label="Follow on LinkedIn"
+              icon={LinkedInIcon}
+            />
+
           </div>
         </div>
       </Container>
@@ -244,7 +251,7 @@ export default function Home() {
             <Examples />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            {/* <Resume /> */}
+            <Resume />
             <Contact />
           </div>
         </div>

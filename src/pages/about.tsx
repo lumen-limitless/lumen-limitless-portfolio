@@ -78,7 +78,7 @@ export default function About() {
 
               <p>
                 Today, I use my skills in Typescript, Solidity, NextJS,
-                EthersJS, and much more to create exciting new products on the
+                Rust, and much more to create exciting new products on the
                 cutting edge of technology. I have experience working on the
                 frontend, backend, and smart contracts for a wide variety of
                 projects and organizations. Want to make your dream project a

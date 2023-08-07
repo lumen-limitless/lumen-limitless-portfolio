@@ -36,22 +36,23 @@ export default function Skills() {
       >
         <div className="space-y-20">
           <ToolsSection title="Programming Languages">
+            <Tool title="Javascript">The language of the web.</Tool>
             <Tool title="Typescript">Typed superset of JavaScript.</Tool>
             <Tool title="Solidity">
               Object oriented programming language for implementing smart
               contracts.
+            </Tool>
+            <Tool title="Rust">
+              Fast, safe, concurrent, and practical language.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Development tools">
             <Tool title="Visual Studio Code">
               The best code editing platform available today.
             </Tool>
-            <Tool title="iTerm2 & Terminator">
-              Terminals I use on my devices for general development and network
+            <Tool title="iTerm2">
+              Terminal I use on my devices for general development and network
               administration.
-            </Tool>
-            <Tool title="TablePlus">
-              Great software for working with databases.
             </Tool>
             <Tool title="Figma">
               Professional and complete design tool, completely free.
@@ -60,14 +61,16 @@ export default function Skills() {
           <ToolsSection title="Libraries & Frameworks">
             <Tool title="NextJS">The best React framework ever created.</Tool>
             <Tool title="TailwindCSS">
-              Most versatile CSS-in-JS framework, helps me create and manage
-              beautiful webpage designs without the headache of vanilla CSS.
+              Most versatile CSS-in-JS framework.
             </Tool>
             <Tool title="Framer Motion">
               Intuitive and production-ready animation library.
             </Tool>
-            <Tool title="EthersJS">
-              Highly versatile library for creating web3 applications.
+            <Tool title="Viem">
+              Versatile library for interacting with EVM based blockchains.
+            </Tool>
+            <Tool title="Wagmi">
+              Library for creating web3 applications with react.
             </Tool>
             <Tool title="ThreeJS">
               Allows easy manipulation of 3D objects & scenes in web

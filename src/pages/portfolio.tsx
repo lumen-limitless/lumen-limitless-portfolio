@@ -4,6 +4,7 @@ import { SimpleLayout } from '../layouts/SimpleLayout'
 import ascensionLogo from '../images/logos/ascension.svg'
 import metamodelsLogo from '../images/logos/metamodels.svg'
 import pawsitiveLogo from '../images/logos/pawsitive.png'
+import toonaLogo from '../images/logos/toona.svg'
 import { NextSeo } from 'next-seo'
 
 const projects = [
@@ -36,6 +37,16 @@ const projects = [
     },
     logo: pawsitiveLogo,
   },
+  {
+    name: "Toona Studio",
+    description: "a digital product studio based in Rochester, NY that designs & develops innovative and human-centered experiences to enrich your business.",
+    link: {
+      href: 'https://toona.studio/',
+      label: 'toona.studio',
+    },
+    logo: toonaLogo,
+
+  }
 ]
 
 function LinkIcon(props: any) {
@@ -62,7 +73,7 @@ export default function Projects() {
       >
         <ul
           role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2"
         >
           {projects.map((project) => (
             <Card key={project.name}>

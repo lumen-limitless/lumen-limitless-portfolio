@@ -1,17 +1,11 @@
+import { Popover, Transition } from '@headlessui/react'
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Popover, Transition } from '@headlessui/react'
-import clsx from 'clsx'
+import React, { Fragment, useEffect, useRef } from 'react'
 import Container from '../components/Container'
-import lumenlimitlessLogo from '../images/lumen.png'
-import React, {
-  Fragment,
-  ReactElement,
-  ReactNode,
-  useEffect,
-  useRef,
-} from 'react'
+import lumenlimitlessLogo from '../images/avatar.jpg'
 
 function CloseIcon(props: JSX.IntrinsicElements['svg']) {
   return (
@@ -135,7 +129,7 @@ function MobileNavigation(props: any) {
                 <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/about">About</MobileNavItem>
                 {/* <MobileNavItem href="/articles">Articles</MobileNavItem> */}
-                {/* <MobileNavItem href="/projects">Projects</MobileNavItem> */}
+                <MobileNavItem href="/portfolio">Portfolio</MobileNavItem>
                 <MobileNavItem href="/skills">Skills</MobileNavItem>
               </ul>
             </nav>
@@ -161,7 +155,7 @@ function NavItem({
         href={href}
         className={clsx(
           'relative flex items-center gap-1 px-3 py-2 transition',
-          isActive ? '' : ''
+          isActive ? '' : '',
         )}
       >
         {children}
@@ -212,26 +206,16 @@ function DesktopNavigation(props: any) {
           About
         </NavItem>
         {/* <NavItem href="/articles">Articles</NavItem> */}
-        {/* <NavItem href="/portfolio">Portfolio</NavItem> */}
+        <NavItem href="/portfolio">
+          <svg xmlns="http://www.w3.org/2000/svg" className='h-4 w-4' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5" /><circle cx="13" cy="12" r="2" /><path d="M18 19c-2.8 0-5-2.2-5-5v8" /><circle cx="20" cy="19" r="2" /></svg>
+          Portfolio
+        </NavItem>
         <NavItem href="/skills">
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" className='h-4 w-4' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
           Skills
         </NavItem>
       </ul>
-    </nav>
+    </nav >
   )
 }
 
@@ -281,7 +265,7 @@ function AvatarContainer({ className = '', ...props }) {
     <div
       className={clsx(
         className,
-        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
+        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
       )}
       {...props}
     />
@@ -302,7 +286,7 @@ function Avatar({ large = false, className = '', ...props }) {
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
-          large ? 'h-16 w-16' : 'h-9 w-9'
+          large ? 'h-16 w-16' : 'h-9 w-9',
         )}
         priority
       />
@@ -336,7 +320,7 @@ export function Header() {
       let scrollY = clamp(
         window.scrollY,
         0,
-        document.body.scrollHeight - window.innerHeight
+        document.body.scrollHeight - window.innerHeight,
       )
 
       if (isInitial.current) {
@@ -388,7 +372,7 @@ export function Header() {
 
       setProperty(
         '--avatar-image-transform',
-        `translate3d(${x}rem, 0, 0) scale(${scale})`
+        `translate3d(${x}rem, 0, 0) scale(${scale})`,
       )
 
       let borderScale = 1 / (toScale / scale)
