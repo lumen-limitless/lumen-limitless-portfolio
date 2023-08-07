@@ -4,16 +4,16 @@ import clsx from 'clsx'
 import { Card } from '../components/Card'
 import Container from '../components/Container'
 import { GitHubIcon, LinkedInIcon, TwitterIcon } from '../components/SocialIcons'
-import image1 from '../images/photos/typescript.webp'
-import image2 from '../images/photos/solidity.webp'
-import image3 from '../images/photos/tailwind.webp'
-import image4 from '../images/photos/next.webp'
-import image5 from '../images/photos/rust.png'
+import image1 from '@/public/photos/typescript.webp'
+import image2 from '@/public/photos/solidity.webp'
+import image3 from '@/public/photos/tailwind.webp'
+import image4 from '@/public/photos/next.webp'
+import image5 from '@/public/photos/rust.png'
 import { Contact } from '../components/Contact'
 import { Button } from '../components/Button'
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import toonaLogo from '../images/logos/toona.svg'
+import toonaLogo from '@/public/logos/toona.svg'
 
 function BriefcaseIcon(props: any) {
   return (
@@ -122,7 +122,7 @@ function Resume() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 backdrop-blur">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>

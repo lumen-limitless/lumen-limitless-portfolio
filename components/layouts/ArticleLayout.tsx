@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import Container from '../components/Container'
-import { formatDate } from '../lib/formatDate'
-import { Prose } from '../components/Prose'
+import Container from '../Container'
+import { formatDate } from '../../lib/formatDate'
+import { Prose } from '../Prose'
 import { ReactNode } from 'react'
 
 function ArrowLeftIcon(props: any) {

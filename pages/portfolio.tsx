@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { Card } from '../components/Card'
-import { SimpleLayout } from '../layouts/SimpleLayout'
-import ascensionLogo from '../images/logos/ascension.svg'
-import metamodelsLogo from '../images/logos/metamodels.svg'
-import pawsitiveLogo from '../images/logos/pawsitive.png'
-import toonaLogo from '../images/logos/toona.svg'
+import { SimpleLayout } from '../components/layouts/SimpleLayout'
+import ascensionLogo from '@/public/logos/ascension.svg'
+import metamodelsLogo from '@/public/logos/metamodels.svg'
+import pawsitiveLogo from '@/public/logos/pawsitive.png'
+import toonaLogo from '@/public/logos/toona.svg'
 import { NextSeo } from 'next-seo'
 
 const projects = [

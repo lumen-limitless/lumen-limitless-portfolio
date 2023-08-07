@@ -63,7 +63,7 @@ export function Contact() {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className=" rounded-2xl border border-stratos-900/10  p-6  backdrop-blur dark:border-stratos-100/40  "
+        className=" rounded-2xl border border-stratos-900/10  p-6  backdrop-blur dark:border-stratos-100/40"
       >
         <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <MailIcon className="h-6 w-6 flex-none" />

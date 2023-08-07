@@ -1,4 +1,4 @@
-import { SimpleLayout } from '../layouts/SimpleLayout'
+import { SimpleLayout } from '../components/layouts/SimpleLayout'
 import { NextSeo } from 'next-seo'
 
 export default function ThankYou() {

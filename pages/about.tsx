@@ -3,7 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import Container from '../components/Container'
 import { GitHubIcon, TwitterIcon } from '../components/SocialIcons'
-import portraitImage from '../images/avatar.jpg'
+import portraitImage from '@/public/avatar.jpg'
 import { NextSeo } from 'next-seo'
 import { ReactNode } from 'react'
 

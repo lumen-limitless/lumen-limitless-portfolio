@@ -4,8 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { Fragment, useEffect, useRef } from 'react'
-import Container from '../components/Container'
-import lumenlimitlessLogo from '../images/avatar.jpg'
+import Container from './Container'
+import lumenlimitlessLogo from '@/public/avatar.jpg'
 
 function CloseIcon(props: JSX.IntrinsicElements['svg']) {
   return (
