@@ -64,11 +64,11 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title="Projects"
+        title="Portfolio"
         description="Projects and organizations that I have contributed to during my career."
       />
       <SimpleLayout
-        title="Projects"
+        title="Portfolio"
         intro="Projects and organizations that I have contributed to during my career."
       >
         <ul
