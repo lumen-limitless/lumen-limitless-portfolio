@@ -1,55 +1,16 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
-import { Card } from '../components/Card'
-import Container from '../components/Container'
-import { GitHubIcon, LinkedInIcon, TwitterIcon } from '../components/SocialIcons'
-import image1 from '@/public/photos/typescript.webp'
-import image2 from '@/public/photos/solidity.webp'
-import image3 from '@/public/photos/tailwind.webp'
+import { Card } from '@/components/Card'
+import { Contact } from '@/components/Contact'
+import Container from '@/components/Container'
+import { GitHubIcon, TwitterIcon } from '@/components/SocialIcons'
+import { cn } from '@/lib/utils'
 import image4 from '@/public/photos/next.webp'
 import image5 from '@/public/photos/rust.png'
-import { Contact } from '../components/Contact'
-import { Button } from '../components/Button'
-import { motion } from 'framer-motion'
+import image2 from '@/public/photos/solidity.webp'
+import image3 from '@/public/photos/tailwind.webp'
+import image1 from '@/public/photos/typescript.webp'
+import Image from 'next/image'
+import Link from 'next/link'
 import { TypeAnimation } from 'react-type-animation'
-import toonaLogo from '@/public/logos/toona.svg'
-
-function BriefcaseIcon(props: any) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
-function ArrowDownIcon(props: any) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
 
 // function Article({ article }) {
 //   return (
@@ -106,67 +67,56 @@ function SocialLink({ icon: Icon, ...props }: any) {
   )
 }
 
-function Resume() {
-  let resume = [
+// function Resume() {
+//   let resume = []
 
-    {
-      company: 'Toona Studio',
-      title: 'Lead Developer',
-      logo: toonaLogo,
-      start: '2021',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-  ]
-
-  return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 backdrop-blur">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {resume.map((role: any, roleIndex: any) => (
-          <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
-            </div>
-            <dl className="flex flex-auto flex-wrap gap-x-2">
-              <dt className="sr-only">Company</dt>
-              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
-              </dd>
-              <dt className="sr-only">Role</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-                {role.title}
-              </dd>
-              <dt className="sr-only">Date</dt>
-              <dd
-                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
-                  }`}
-              >
-                <time dateTime={role.start.dateTime ?? role.start}>
-                  {role.start.label ?? role.start}
-                </time>{' '}
-                <span aria-hidden="true">—</span>{' '}
-                <time dateTime={role.end.dateTime ?? role.end}>
-                  {role.end.label ?? role.end}
-                </time>
-              </dd>
-            </dl>
-          </li>
-        ))}
-      </ol>
-      {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button> */}
-    </div>
-  )
-}
+//   return (
+//     <div className="rounded-2xl border border-zinc-100 p-6 backdrop-blur dark:border-zinc-700/40">
+//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <Briefcase className="h-6 w-6 flex-none" />
+//         <span className="ml-3">Work</span>
+//       </h2>
+//       <ol className="mt-6 space-y-4">
+//         {resume.map((role: any, roleIndex: any) => (
+//           <li key={roleIndex} className="flex gap-4">
+//             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+//               <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+//             </div>
+//             <dl className="flex flex-auto flex-wrap gap-x-2">
+//               <dt className="sr-only">Company</dt>
+//               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+//                 {role.company}
+//               </dd>
+//               <dt className="sr-only">Role</dt>
+//               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+//                 {role.title}
+//               </dd>
+//               <dt className="sr-only">Date</dt>
+//               <dd
+//                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+//                 aria-label={`${role.start.label ?? role.start} until ${
+//                   role.end.label ?? role.end
+//                 }`}
+//               >
+//                 <time dateTime={role.start.dateTime ?? role.start}>
+//                   {role.start.label ?? role.start}
+//                 </time>{' '}
+//                 <span aria-hidden="true">—</span>{' '}
+//                 <time dateTime={role.end.dateTime ?? role.end}>
+//                   {role.end.label ?? role.end}
+//                 </time>
+//               </dd>
+//             </dl>
+//           </li>
+//         ))}
+//       </ol>
+//       {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
+//         Download CV
+//         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+//       </Button> */}
+//     </div>
+//   )
+// }
 
 function Photos() {
   let rotations = [
@@ -181,12 +131,12 @@ function Photos() {
   return (
     <Container className="mt-16 sm:mt-20">
       <div className=" flex justify-evenly  overflow-hidden py-4 sm:gap-1">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <motion.div
-            key={image.src}
-            className={clsx(
-              ' relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl  sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
-              rotations[imageIndex % rotations.length]
+        {[image1, image2, image3, image4, image5].map((image, i) => (
+          <div
+            key={i}
+            className={cn(
+              'relative aspect-[1/1] w-12 flex-none overflow-hidden rounded-xl  sm:w-16 sm:rounded-2xl md:w-24 lg:w-32 xl:w-36 2xl:w-40',
+              rotations[i % rotations.length],
             )}
           >
             <Image
@@ -195,7 +145,7 @@ function Photos() {
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
-          </motion.div>
+          </div>
         ))}
       </div>
     </Container>
@@ -234,13 +184,6 @@ export default function Home() {
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
-
-            <SocialLink
-              href="https://www.linkedin.com/in/zachary-lippa-2b04a6285/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-
           </div>
         </div>
       </Container>
@@ -251,7 +194,7 @@ export default function Home() {
             <Examples />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Resume />
+            {/* <Resume /> */}
             <Contact />
           </div>
         </div>

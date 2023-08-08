@@ -1,72 +1,21 @@
+import { cn } from '@/lib/utils'
+import lumenlimitlessLogo from '@/public/lumen.png'
 import { Popover, Transition } from '@headlessui/react'
-import clsx from 'clsx'
+import {
+  Briefcase,
+  ChevronDown,
+  FolderGit,
+  Home,
+  Moon,
+  Sun,
+  User,
+  X,
+} from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { Fragment, useEffect, useRef } from 'react'
 import Container from './Container'
-import lumenlimitlessLogo from '@/public/avatar.jpg'
-
-function CloseIcon(props: JSX.IntrinsicElements['svg']) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function ChevronDownIcon(props: JSX.IntrinsicElements['svg']) {
-  return (
-    <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
-      <path
-        d="M1.75 1.75 4 4.25l2.25-2.5"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function SunIcon(props: JSX.IntrinsicElements['svg']) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z" />
-      <path
-        d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
-        fill="none"
-      />
-    </svg>
-  )
-}
-
-function MoonIcon(props: JSX.IntrinsicElements['svg']) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
 
 function MobileNavItem({
   href = '',
@@ -89,7 +38,7 @@ function MobileNavigation(props: any) {
     <Popover {...props}>
       <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
-        <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
+        <ChevronDown className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -118,7 +67,7 @@ function MobileNavigation(props: any) {
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
+                <X className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
               </Popover.Button>
               <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
                 Navigation
@@ -153,7 +102,7 @@ function NavItem({
     <li>
       <Link
         href={href}
-        className={clsx(
+        className={cn(
           'relative flex items-center gap-1 px-3 py-2 transition',
           isActive ? '' : '',
         )}
@@ -172,50 +121,24 @@ function DesktopNavigation(props: any) {
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/">
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-            />
-          </svg>
+          <Home className="h-4 w-4" />
           Home
         </NavItem>
         <NavItem href="/about">
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-            />
-          </svg>
+          <User className="h-4 w-4" />
           About
         </NavItem>
         {/* <NavItem href="/articles">Articles</NavItem> */}
         <NavItem href="/portfolio">
-          <svg xmlns="http://www.w3.org/2000/svg" className='h-4 w-4' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5" /><circle cx="13" cy="12" r="2" /><path d="M18 19c-2.8 0-5-2.2-5-5v8" /><circle cx="20" cy="19" r="2" /></svg>
+          <FolderGit className="h-4 w-4" />
           Portfolio
         </NavItem>
         <NavItem href="/skills">
-          <svg xmlns="http://www.w3.org/2000/svg" className='h-4 w-4' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
+          <Briefcase className="h-4 w-4" />
           Skills
         </NavItem>
       </ul>
-    </nav >
+    </nav>
   )
 }
 
@@ -248,8 +171,8 @@ function ModeToggle() {
       className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-tahiti-50 [@media(prefers-color-scheme:dark)]:stroke-tahiti-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-tahiti-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-tahiti-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-tahiti-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-tahiti-500" />
+      <Sun className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-tahiti-50 [@media(prefers-color-scheme:dark)]:stroke-tahiti-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-tahiti-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-tahiti-600" />
+      <Moon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-tahiti-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-tahiti-500" />
     </button>
   )
 }
@@ -263,7 +186,7 @@ function clamp(number: number, a: number, b: number) {
 function AvatarContainer({ className = '', ...props }) {
   return (
     <div
-      className={clsx(
+      className={cn(
         className,
         'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
       )}
@@ -277,14 +200,14 @@ function Avatar({ large = false, className = '', ...props }) {
     <Link
       href="/"
       aria-label="Home"
-      className={clsx(className, 'pointer-events-auto')}
+      className={cn(className, 'pointer-events-auto')}
       {...props}
     >
       <Image
         src={lumenlimitlessLogo}
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
-        className={clsx(
+        className={cn(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
           large ? 'h-16 w-16' : 'h-9 w-9',
         )}
